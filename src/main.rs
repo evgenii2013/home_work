@@ -8,7 +8,7 @@ fn main() {
     x=21-78;
     y=multi(x,y);
     println!("Hello, evgenii! : {}", sum(ages));
-    print_f(20);
+    fizz_buzz();
 }
 fn sum(items:Vec<i32>) -> i32 {
     let mut result = 0;
@@ -42,4 +42,29 @@ fn print_f(n:i32) {
     for i in 0..n {
         println!("{}", f(i));
     }
+}
+fn fizz_buzz(){
+    for i in 1..101 {
+        if is_divided_by_15(i) {
+            println!("fizz_buzz");
+        } else if is_divided_by_5(i) {
+            println!("buzz")
+        } else if is_divided_by_3(i) {
+            println!("fizz")
+        } else {
+            println!("{}", i);
+        }
+    }
+}
+
+fn is_divided_by_3(i:i32) -> bool{
+    i % 3 == 0
+}
+
+fn is_divided_by_5(i:i32) -> bool{
+    i % 5 == 0
+}
+
+fn is_divided_by_15(i:i32) -> bool{
+    i % 15 == 0
 }
