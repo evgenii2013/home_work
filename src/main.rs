@@ -44,7 +44,7 @@ fn print_f(n:i32) {
     }
 }
 fn fizz_buzz(){
-    for i in 1..101 {
+    for i in 1..201 {
         if is_divided_by_15(i) {
             println!("fizz_buzz");
         } else if is_divided_by_5(i) {
