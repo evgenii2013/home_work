@@ -8,7 +8,7 @@ fn main() {
     x=21-78;
     y=multi(x,y);
     println!("Hello, evgenii! : {}", sum(ages));
-    fizz_buzz();
+    all_5_friends();
 }
 fn sum(items:Vec<i32>) -> i32 {
     let mut result = 0;
@@ -68,3 +68,34 @@ fn is_divided_by_5(i:i32) -> bool{
 fn is_divided_by_15(i:i32) -> bool{
     i % 15 == 0
 }
+
+fn pari_dispari(){
+    for i in 1..201 {
+        if is_divided_by_2(i) {
+            println!("pari");
+        } else {
+            println!("dispari")
+        }
+    }
+}
+
+fn is_divided_by_2(i:i32) -> bool{
+    i % 2 == 0
+}
+
+fn is_divided_by_10(i:i32) -> bool{
+    i % 10 == 0
+}
+
+fn all_5_friends(){
+    for i in 1..11 {
+        if is_divided_by_10(i) {
+            println!("{}:I am your best friend",i);
+        }else if is_divided_by_5(i) {
+            println!("{}:I am your friend", i)
+        }else  {
+            println!("{}:I am not your friend", i)
+        }
+    }
+}
+
