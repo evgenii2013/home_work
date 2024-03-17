@@ -8,7 +8,8 @@ fn main() {
     x=21-78;
     y=multi(x,y);
     println!("Hello, evgenii! : {}", sum(ages));
-    all_5_friends();
+    let items:Vec<i32> = vec![9,10,8,48,58,1,2,70];
+    println!("Max, evgenii! : {}", max_from_vec(items));
 }
 fn sum(items:Vec<i32>) -> i32 {
     let mut result = 0;
@@ -97,5 +98,36 @@ fn all_5_friends(){
             println!("{}:I am not your friend", i)
         }
     }
+}
+
+fn all_6_friends(){
+    for i in 1..101 {
+        if is_divided_by_36(i) {
+            println!("{}:I am your best friend",i);
+        }else if is_divided_by_6(i) {
+            println!("{}:I am your friend", i)
+        }else  {
+            println!("{}:I am not your friend", i)
+        }
+    }
+}
+
+fn is_divided_by_6(i:i32) -> bool{
+    i % 6 == 0
+}
+
+
+fn is_divided_by_36(i:i32) -> bool{
+    i % 36 == 0
+}
+
+fn max_from_vec(ar:Vec<i32>) -> i32 {
+    let mut max: i32 = ar[0];
+    for i in ar {
+        if max <= i {
+            max = i
+        }
+    }
+    return max
 }
 
