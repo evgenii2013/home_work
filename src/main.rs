@@ -9,7 +9,8 @@ fn main() {
     y=multi(x,y);
     println!("Hello, evgenii! : {}", sum(ages));
     let items:Vec<i32> = vec![9,10,8,48,58,1,2,70];
-    println!("Max, evgenii! : {}", max_from_vec(items));
+    println!("min, evgenii! : {}", min_from_vec(items));
+    print_power_of_2(20)
 }
 fn sum(items:Vec<i32>) -> i32 {
     let mut result = 0;
@@ -131,3 +132,26 @@ fn max_from_vec(ar:Vec<i32>) -> i32 {
     return max
 }
 
+fn power_of_2(i:i32) -> i32 {
+    return match i {
+        0 => 1,
+        1 => 2,
+        _ => 2 *  power_of_2(i-1)
+    }
+}
+
+fn print_power_of_2(n:i32) {
+    for i in 0..n {
+        println!("{}",  power_of_2(i));
+    }
+}
+
+fn min_from_vec(ar:Vec<i32>) -> i32 {
+    let mut min: i32 = ar[0];
+    for i in ar {
+        if min >= i {
+            min = i
+        }
+    }
+    return min
+}
