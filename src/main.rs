@@ -9,8 +9,9 @@ fn main() {
     y=multi(x,y);
     println!("Hello, evgenii! : {}", sum(ages));
     let items:Vec<i32> = vec![9,10,8,48,58,1,2,70];
-    println!("min, evgenii! : {}", min_from_vec(items));
-    print_power_of_2(20)
+    println!("sum, evgenii! : {}", sum_of_3(1,2,2));
+    print_power_of_3 (10)
+
 }
 fn sum(items:Vec<i32>) -> i32 {
     let mut result = 0;
@@ -154,4 +155,22 @@ fn min_from_vec(ar:Vec<i32>) -> i32 {
         }
     }
     return min
+}
+
+fn power_of_3(i:i32) -> i32 {
+    return match i {
+        0 => 1,
+        1 => 3,
+        _ => 3 *  crate::power_of_3(i-1)
+    }
+}
+
+fn print_power_of_3(n:i32) {
+    for i in 0..n {
+        println!("{}",  power_of_3(i));
+    }
+}
+
+fn sum_of_3 (x:i32,y:i32,z:i32) -> i32 {
+    return x + y + z
 }
