@@ -10,7 +10,8 @@ fn main() {
     println!("Hello, evgenii! : {}", sum(ages));
     let items:Vec<i32> = vec![9,10,8,48,58,1,2,70];
     println!("sum, evgenii! : {}", sum_of_3(1,2,2));
-    print_power_of_3 (10)
+    print_power_of_5 (10);
+    println!("are_friends : {}", are_friends(4,2))
 
 }
 fn sum(items:Vec<i32>) -> i32 {
@@ -173,4 +174,22 @@ fn print_power_of_3(n:i32) {
 
 fn sum_of_3 (x:i32,y:i32,z:i32) -> i32 {
     return x + y + z
+}
+
+fn power_of_5(i:i32) -> i32 {
+    return match i {
+        0 => 1,
+        1 => 5,
+        _ => 5 *  power_of_5(i-1)
+    }
+}
+
+fn print_power_of_5(n:i32) {
+    for i in 0..n {
+        println!("{}",  power_of_5(i));
+    }
+}
+
+fn are_friends (a:i32,b:i32) -> bool {
+    a % b == 0
 }
