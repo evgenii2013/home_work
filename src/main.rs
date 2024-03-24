@@ -11,7 +11,8 @@ fn main() {
     let items:Vec<i32> = vec![9,10,8,48,58,1,2,70];
     println!("sum, evgenii! : {}", sum_of_3(1,2,2));
     print_power_of_5 (10);
-    println!("are_friends : {}", are_friends(4,2))
+    println!("are_friends : {}", are_friends(4,2));
+    println!("magic_number : {}", magic_number(magic_number(magic_number(3))))
 
 }
 fn sum(items:Vec<i32>) -> i32 {
@@ -192,4 +193,8 @@ fn print_power_of_5(n:i32) {
 
 fn are_friends (a:i32,b:i32) -> bool {
     a % b == 0
+}
+
+fn magic_number(n:i32) -> i32 {
+    if n % 2 == 0  { n * 2 } else { n + 1 }
 }
