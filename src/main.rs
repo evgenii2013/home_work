@@ -12,8 +12,32 @@ fn main() {
     println!("sum, evgenii! : {}", sum_of_3(1,2,2));
     print_power_of_5 (10);
     println!("are_friends : {}", are_friends(4,2));
-    println!("magic_number : {}", magic_number(magic_number(magic_number(3))))
+    println!("magic_number : {}", magic_number(magic_number(magic_number(3))));
 
+    let r1=Rectangle{
+        h:21,
+        w:62
+    };
+
+    let r2=Rectangle{
+        h:2100,
+        w:620
+    };
+    let name =  "eugenii".to_string();
+    let p=Person {
+        name,
+        age:10
+    };
+
+    let family : Vec<Person> = vec![
+        Person{
+            name: "Papa".to_string(),
+            age: 56,
+        }
+    ];
+
+    println!("Rectangle area : {} {} Age {}", r1.area(),r2.area(), p.age);
+    p.hello()
 }
 fn sum(items:Vec<i32>) -> i32 {
     let mut result = 0;
@@ -197,4 +221,25 @@ fn are_friends (a:i32,b:i32) -> bool {
 
 fn magic_number(n:i32) -> i32 {
     if n % 2 == 0  { n * 2 } else { n + 1 }
+}
+
+struct Rectangle {
+    h:i32,
+    w:i32
+}
+
+impl Rectangle {
+    fn area(&self) -> i32 {
+        self.w * self.h
+    }
+}
+struct Person {
+    name: String,
+    age: u8
+}
+
+impl Person {
+    fn hello(&self){
+        println!("Hello {}", self.name)
+    }
 }
