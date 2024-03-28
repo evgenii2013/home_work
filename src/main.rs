@@ -23,21 +23,32 @@ fn main() {
         h:2100,
         w:620
     };
-    let name =  "eugenii".to_string();
-    let p=Person {
-        name,
-        age:10
-    };
 
     let family : Vec<Person> = vec![
         Person{
             name: "Papa".to_string(),
             age: 56,
-        }
+            money:1000
+        },
+        Person {
+            name: "eugenii".to_string(),
+            age:10,
+            money:1000
+        },
+        Person{
+            name: "mama".to_string(),
+            age: 46,
+            money:1000
+        },
+        Person{
+            name: "max".to_string(),
+            age: 8,
+            money:1000
+        },
     ];
 
-    println!("Rectangle area : {} {} Age {}", r1.area(),r2.area(), p.age);
-    p.hello()
+    println!("Rectangle area : {} {}", r1.area(),r2.area());
+    println!("family money :{}",  total_money(family));
 }
 fn sum(items:Vec<i32>) -> i32 {
     let mut result = 0;
@@ -235,11 +246,28 @@ impl Rectangle {
 }
 struct Person {
     name: String,
-    age: u8
+    age: i32,
+    money:i32,
 }
 
 impl Person {
     fn hello(&self){
         println!("Hello {}", self.name)
     }
+}
+
+fn total_age(family:Vec<Person>) -> i32 {
+    let mut result:i32 = 0;
+    for person in family{
+        result=result + person.age;
+    }
+    result
+}
+
+fn total_money(family:Vec<Person>) -> i32 {
+    let mut result:i32 = 0;
+    for person in family{
+        result=result + person.money;
+    }
+    result
 }
