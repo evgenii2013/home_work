@@ -14,6 +14,7 @@ fn main() {
     println!("are_friends : {}", are_friends(4,2));
     println!("magic_number : {}", magic_number(magic_number(magic_number(3))));
 
+
     let r1=Rectangle{
         h:21,
         w:62
@@ -28,27 +29,31 @@ fn main() {
         Person{
             name: "Papa".to_string(),
             age: 56,
-            money:1000
+            money:1000,
+            height:182
         },
         Person {
             name: "eugenii".to_string(),
             age:10,
-            money:1000
+            money:1000,
+            height:158
         },
         Person{
             name: "mama".to_string(),
             age: 46,
-            money:1000
+            money:1000,
+            height:162
         },
         Person{
             name: "max".to_string(),
             age: 8,
-            money:1000
+            money:1000,
+            height:144
         },
     ];
 
     println!("Rectangle area : {} {}", r1.area(),r2.area());
-    println!("family money :{}",  total_money(family));
+    println!("family height :{}",  total_height(family));
 }
 fn sum(items:Vec<i32>) -> i32 {
     let mut result = 0;
@@ -248,6 +253,7 @@ struct Person {
     name: String,
     age: i32,
     money:i32,
+    height:i32,
 }
 
 impl Person {
@@ -268,6 +274,14 @@ fn total_money(family:Vec<Person>) -> i32 {
     let mut result:i32 = 0;
     for person in family{
         result=result + person.money;
+    }
+    result
+}
+
+fn total_height(family:Vec<Person>) -> i32 {
+    let mut result:i32 = 0;
+    for person in family{
+        result=result + person.height;
     }
     result
 }
