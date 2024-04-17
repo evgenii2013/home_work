@@ -13,7 +13,7 @@ fn main() {
     print_power_of_5 (10);
     println!("are_friends : {}", are_friends(4,2));
     println!("magic_number : {}", magic_number(magic_number(magic_number(3))));
-
+    println!("bar : {}", bar(5));
 
     let r1=Rectangle{
         h:21,
@@ -285,3 +285,54 @@ fn total_height(family:Vec<Person>) -> i32 {
     }
     result
 }
+
+fn foo () -> i32 {
+    10
+}
+
+fn bar (x:i32) -> i32 {
+    x * foo()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
