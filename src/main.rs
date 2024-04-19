@@ -16,7 +16,7 @@ fn main() {
     println!("are_friends : {}", are_friends(4,2));
     println!("magic_number : {}", magic_number(magic_number(magic_number(3))));
     println!("bar : {}", bar(5));
-    println!("hello_developer : {}", )
+    hello_developer();
 
     let r1=Rectangle{
         h:21,
@@ -298,17 +298,17 @@ fn bar (x:i32) -> i32 {
 }
 
 fn print_hello () {
-    println!("{hello}", )
+    println!("hello" )
 }
 
 fn print_goodbye () {
-    println!("{goodbye}",)
+    println!("goodbye")
 }
 
 fn hello_developer () {
-    print_hello; println! ("{eugenii}",) ; {
-        print_goodbye()
-    }
+    print_hello();
+    println! ("Eugenii");
+    print_goodbye();
 }
 
 
