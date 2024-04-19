@@ -1,3 +1,5 @@
+use std::fs::create_dir_all;
+
 fn main() {
     let mut x:i32;
     let mut y:i32;
@@ -14,6 +16,7 @@ fn main() {
     println!("are_friends : {}", are_friends(4,2));
     println!("magic_number : {}", magic_number(magic_number(magic_number(3))));
     println!("bar : {}", bar(5));
+    println!("hello_developer : {}", )
 
     let r1=Rectangle{
         h:21,
@@ -292,6 +295,20 @@ fn foo () -> i32 {
 
 fn bar (x:i32) -> i32 {
     x * foo()
+}
+
+fn print_hello () {
+    println!("{hello}", )
+}
+
+fn print_goodbye () {
+    println!("{goodbye}",)
+}
+
+fn hello_developer () {
+    print_hello; println! ("{eugenii}",) ; {
+        print_goodbye()
+    }
 }
 
 
