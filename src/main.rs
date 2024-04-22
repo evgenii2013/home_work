@@ -17,6 +17,7 @@ fn main() {
     println!("magic_number : {}", magic_number(magic_number(magic_number(3))));
     println!("bar : {}", bar(5));
     hello_developer();
+    print_i_am_programmer();
 
     let r1=Rectangle{
         h:21,
@@ -311,13 +312,20 @@ fn hello_developer () {
     print_goodbye();
 }
 
+fn print_me () {
+    println!("i am evgenii" )
+}
 
 
+fn print_programmer () {
+    println!("i am a programmer" )
+}
 
 
-
-
-
+fn print_i_am_programmer () {
+    print_me();
+    print_programmer();
+}
 
 
 
