@@ -18,6 +18,7 @@ fn main() {
     println!("bar : {}", bar(5));
     hello_developer();
     print_i_am_programmer();
+    greet_nice("evgenii");
 
     let r1=Rectangle{
         h:21,
@@ -327,11 +328,22 @@ fn print_i_am_programmer () {
     print_programmer();
 }
 
+fn nice_day () {
+    println!("have a nice day" )
+}
+
+fn greet () {
+    println!("hello evgenii" )
+}
 
 
+fn greet_nice (evgenii: &str) {
+    greet() ;
+    nice_day ();
+}
+    
 
-
-
+  
 
 
 
