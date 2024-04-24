@@ -19,6 +19,8 @@ fn main() {
     hello_developer();
     print_i_am_programmer();
     greet_nice("evgenii");
+    println!("5  : {}", return_5());
+    println!("10  : {}", return_10());
 
     let r1=Rectangle{
         h:21,
@@ -341,16 +343,32 @@ fn greet_nice (evgenii: &str) {
     greet() ;
     nice_day ();
 }
-    
-
-  
 
 
+fn return_2 () -> i32 {
+    2
+}
+
+fn return_3 () -> i32 {
+    3
+}
+
+fn return_5 () -> i32 {
+    return_2() + return_3()
+}
 
 
+fn return_4() -> i32 {
+    4
+}
 
+ fn return_6 () -> i32 {
+     6
+ }
 
-
+fn return_10 () -> i32 {
+    return_4 () + return_6 ()
+}
 
 
 
