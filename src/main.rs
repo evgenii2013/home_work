@@ -21,6 +21,7 @@ fn main() {
     greet_nice("evgenii");
     println!("5  : {}", return_5());
     println!("10  : {}", return_10());
+    dog_barking();
 
     let r1=Rectangle{
         h:21,
@@ -371,13 +372,20 @@ fn return_10 () -> i32 {
 }
 
 
+fn print_dog_name () {
+    println!("juja" )
+}
 
 
+fn print_wouaf () {
+    println!("wouaf wouaf" )
+}
 
 
-
-
-
+fn dog_barking () {
+    print_dog_name();
+    print_wouaf()
+}
 
 
 
