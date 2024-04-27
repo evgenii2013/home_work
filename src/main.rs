@@ -22,6 +22,7 @@ fn main() {
     println!("5  : {}", return_5());
     println!("10  : {}", return_10());
     dog_barking();
+    dog();
 
     let r1=Rectangle{
         h:21,
@@ -387,15 +388,19 @@ fn dog_barking () {
     print_wouaf()
 }
 
+fn infinity_dog () {println!("infinity")}
 
 
+fn jump () {println!("jump")}
 
 
+fn bark () {println!("bark")}
 
 
-
-
-
-
+fn dog () {
+    infinity_dog();
+    jump();
+    bark()
+}
 
 
