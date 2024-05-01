@@ -23,6 +23,7 @@ fn main() {
     println!("10  : {}", return_10());
     dog_barking();
     dog();
+    print_double_me(7);
 
     let r1=Rectangle{
         h:21,
@@ -403,4 +404,10 @@ fn dog () {
     bark()
 }
 
+fn double_me (x:i32) -> i32{
+    x * 2
+}
 
+fn print_double_me (x:i32) {
+    println!("I have doubled the value of {} and it is now: {}", x, double_me(x));
+}
