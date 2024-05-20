@@ -24,6 +24,7 @@ fn main() {
     dog_barking();
     dog();
     print_double_me(7);
+    print_triple_me(10);
 
     let r1=Rectangle{
         h:21,
@@ -410,4 +411,12 @@ fn double_me (x:i32) -> i32{
 
 fn print_double_me (x:i32) {
     println!("I have doubled the value of {} and it is now: {}", x, double_me(x));
+}
+
+fn triple_me (x:i32) -> i32 {
+    x * 3
+}
+
+fn print_triple_me (x:i32) {
+    println!("I have tripled the value of {} and it is now: {}", x, triple_me(x));
 }
