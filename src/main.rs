@@ -25,6 +25,8 @@ fn main() {
     dog();
     print_double_me(7);
     print_triple_me(10);
+    print_add_five(5);
+    print_add_five(add_five(5));
 
     let r1=Rectangle{
         h:21,
@@ -420,3 +422,12 @@ fn triple_me (x:i32) -> i32 {
 fn print_triple_me (x:i32) {
     println!("I have tripled the value of {} and it is now: {}", x, triple_me(x));
 }
+
+fn add_five (x:i32) -> i32 {
+    x + 5
+}
+
+fn print_add_five (x:i32) {
+    println!("I have added 5 to the value of {} and it is now: {}", x, add_five(x));
+}
+
